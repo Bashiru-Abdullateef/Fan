@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.big-circle{
+    border: thin solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(red,blue);
+}
+.big-circle .small-circle{
+    border: thin solid white;
+    /* border: none; */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: red; */
+    animation: fans 1s ease-in-out 9s infinite;
+
+}
+@keyframes fans{
+    from{
+        transform: rotate(1deg);
+        background-color: red;
+    }to{
+        transform: rotate(360deg);
+        background-color: blue;
+    }
+}
+
+.big-circle .small-circle .fan:nth-of-type(1){
+    border: thin solid white;
+    width: 100px;
+    height: 3.2vh;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 139px;
+    border-bottom-left-radius: 10px;
+    animation: fan 1s ease-in-out 0s infinite;
+    border-top-left-radius: 10px;
+
+}
+@keyframes fan{
+    from{
+        background-color: blue;
+    }to{
+        background-color: red;
+    }
+}
+.big-circle .small-circle .fan:nth-of-type(2){
+    border: thin solid white;
+    width: 100px;
+    height: 4vh;
+    transform: rotate(180deg);
+    position: absolute;
+    left: 99px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    animation: fan 1s ease-in-out 0s infinite;
+
+}
+@keyframes fan{
+    from{
+        background-color: blue;
+    }to{
+        background-color: red;
+    }
+}
+.big-circle .small-circle .fan:nth-of-type(3){
+    border: thin solid white;
+    width: 100px;
+    height: 4vh;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 99px;
+    border-bottom-right-radius: 10px;
+    animation: fan 1s ease-in-out 0s infinite;
+
+    border-top-right-radius: 10px;
+}
+@keyframes fan{
+    from{
+        background-color: blue;
+    }to{
+        background-color: red;
+    }
+}
+.big-circle .small-circle .fan:nth-of-type(4){
+    border: thin solid white;
+    width: 100px;
+    height: 3.2vh;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 138px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: fan 1s ease-in-out 0s infinite;
+
+
+}
+@keyframes fan{
+    from{
+        background-color: blue;
+    }to{
+        background-color: red;
+    }
+}
+.big-circle .standing{
+    border: thin solid black;
+    width: 30px;
+    height: 40vh;
+    /* transform: rotate(90deg); */
+    position: absolute;
+    top: 298px;
+    background-image: linear-gradient(red, blue) ;
+
+    /* border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px; */
+
+    /* animation: fan 1s ease-in-out 0s infinite; */
+
+
+}
+.big-circle .base{
+    border: thin solid black;
+    width: 200px;
+    height: 12vh;
+    top: 548px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: linear-gradient(red, blue) ;
+}
